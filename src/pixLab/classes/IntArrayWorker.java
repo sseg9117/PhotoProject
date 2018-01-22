@@ -28,7 +28,6 @@ public class IntArrayWorker
     }
     return total;
   }
-  
   /**
    * Method to return the total using a nested for-each loop
    * @return the total of the values in the array
@@ -41,11 +40,12 @@ public class IntArrayWorker
       for (int item : rowArray)
       {
         total = total + item;
+        item = total;
       }
     }
     return total;
   }
-  
+
   /**
    * Method to fill with an increasing count
    */
@@ -99,5 +99,11 @@ public class IntArrayWorker
       }
     }
   }
+
+public int getColTotal(int i)
+{
+	return i;
+}
+
  
 }
