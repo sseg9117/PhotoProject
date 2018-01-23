@@ -102,7 +102,9 @@ public class IntArrayWorker
 
 public int getColTotal(int i)
 {
-	return i;
+	int colTotal = i;
+	
+	return colTotal;
 }
 
  
