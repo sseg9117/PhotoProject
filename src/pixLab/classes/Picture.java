@@ -118,7 +118,23 @@ public class Picture extends SimplePicture
       }
     } 
   }
-  
+  public void mirrorTopToBottom()
+  {
+	  Pixel [][] pixels = this.getPixels2D();
+	  Pixel bottomPixel = null;
+	  Pixel topPixel = null;
+	int height = pixels.length;
+	  for (int col=0; col < pixels.length; col++)
+	  {
+		  for(int row=0; row < height/2; row++)
+		  {
+			  bottomPixel = pixels [row][col];
+			  topPixel = pixels [height - 1 - row] [col];
+			  bottomPixel.setColor(topPixel.getColor());
+		  }
+	  }
+	  
+  }
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple()
   {
@@ -238,5 +254,6 @@ public class Picture extends SimplePicture
     beach.zeroBlue();
     beach.explore();
   }
+  
   
 } // this } is the end of class Picture, put all new methods before this
