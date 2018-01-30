@@ -59,6 +59,13 @@ public class PictureTester
 	  beach.explore();
 	  
   }
+  public static void testTransparentPhoto()
+  {
+	  Picture sonic = new Picture("gorge.jpg");
+	  sonic.explore();
+	  sonic.sonicFilter(76, 25);
+	  sonic.explore();
+  }
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -88,6 +95,7 @@ public class PictureTester
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
-    testMirrorTopToBottom();
+    //testMirrorTopToBottom();
+    testTransparentPhoto();
   }
 }

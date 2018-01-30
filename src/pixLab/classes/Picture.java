@@ -124,7 +124,7 @@ public class Picture extends SimplePicture
 	  Pixel bottomPixel = null;
 	  Pixel topPixel = null;
 	int height = pixels.length;
-	  for (int col=0; col < pixels.length; col++)
+	  for (int col=0; col < pixels[0].length; col++)
 	  {
 		  for(int row=0; row < height/2; row++)
 		  {
@@ -190,14 +190,35 @@ public class Picture extends SimplePicture
     }   
   }
 
-  public void gengarFilter(int startRow, int startCol)
+  public void sonicFilter(int startRow, int startCol)
   {
 	  Pixel fromPixel = null;
 	  Pixel toPixel = null; 
-	  Picture gengar = new Picture("gengar.png");
+	  Picture sonic = new Picture("sonic.png");
+	  Pixel [][] toPixels = this.getPixels2D();
+	  Pixel [][] fromPixels = sonic.getPixels2D();
+	  
+	  
+	  int fromRow = 0;
+	  for (int toRow = startRow; toRow < toPixels.length && fromRow < fromPixels.length; toRow++ )
+	  {
+		  int fromCol =0;
+		  for (int toCol =0; toCol < toPixels[0].length && fromCol < fromPixels[0].length; toCol++)
+		  {
+			  fromPixel = fromPixels[fromRow][fromCol];
+			  toPixel = toPixels[toRow][toCol];
+			  if (!fromPixel.isTransparent())
+			  {
+				  toPixel.setRed(fromPixel.getRed());
+				  toPixel.setBlue(fromPixel.getBlue());
+				  toPixel.setGreen(fromPixel.getGreen());
+			  }
+			  fromCol++;
+		  }
+		  fromRow++;
+	  }
+
   }
-  
-  
   
   /** Method to create a collage of several pictures */
   public void createCollage()
