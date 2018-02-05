@@ -47,9 +47,9 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("swan.jpg");
-    swan.edgeDetection(10);
-    swan.explore();
+    Picture beach = new Picture("beach.jpg");
+    beach.edgeDetection(7);
+    beach.explore();
   }
   public static void testMirrorTopToBottom()
   {
@@ -65,6 +65,13 @@ public class PictureTester
 	  sonic.explore();
 	  sonic.sonicFilter(76, 25);
 	  sonic.explore();
+  }
+  public static void testGlitch()
+  {
+	  Picture beach = new Picture("beach.jpg");
+	  beach.explore();
+	  beach.glitchFilter();
+	  beach.explore();
   }
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -96,6 +103,7 @@ public class PictureTester
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
     //testMirrorTopToBottom();
-    testTransparentPhoto();
+    //testTransparentPhoto();
+	  testGlitch();
   }
 }
