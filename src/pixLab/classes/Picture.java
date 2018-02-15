@@ -299,9 +299,11 @@ public class Picture extends SimplePicture
   public void classFilter()
   {
 	  Pixel[][] pixels = this.getPixels2D();
-	  int width = pixels[0].length;
+	  
 	  int height = pixels.length;
+	  int width = pixels[0].length;
 	  int border = (int)(0.05 * height);
+	  
 	  for (int row = border; row < (height - border); row++)
 	  {
 		  for(int col = border; col < (border + 20); col++)
