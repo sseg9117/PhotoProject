@@ -308,7 +308,7 @@ public class Picture extends SimplePicture
 	  {
 		  for(int col = border; col < (border + 20); col++)
 		  {
-			  pixels[row][col] = pixels[row][col + 20];
+			  pixels[row][col].setColor(pixels[row][col + 20].getColor());
 		  }
 	  }
   }
