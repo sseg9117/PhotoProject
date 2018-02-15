@@ -1,11 +1,8 @@
 package pixLab.classes;
-import java.awt.*;
-import java.awt.font.*;
-import java.awt.geom.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
-import java.text.*;
-import java.util.*;
-import java.util.List; // resolves problem with java.awt.List and java.util.List
 
 /**
  * A class that represents a picture.  This class inherits from 
@@ -296,6 +293,20 @@ public class Picture extends SimplePicture
 	      	}
 	    }
   }
+  public void addMessage(String message, int xPos, int yPos)
+  {
+    Graphics2D graphics2d = getBufferedImage().createGraphics();
+    
+    graphics2d.setColor(Color.BLACK);
+    
+    graphics2d.setPaint(Color.white);
+
+    graphics2d.setFont(new Font("Helvetica",Font.BOLD,16));
+    
+    graphics2d.drawString(message,xPos,yPos);
+    
+  }
+  
   public void classFilter()
   {
 	  Pixel[][] pixels = this.getPixels2D();
