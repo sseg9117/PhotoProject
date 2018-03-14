@@ -112,7 +112,7 @@ public class PictureTester
     //testGetAverageForColumn(0);
     //testMirrorTopToBottom();
     //testTransparentPhoto();
-	 // testGlitch();
-	  testClassFilter();
+	  testGlitch();
+//	  testClassFilter();
   }
 }
