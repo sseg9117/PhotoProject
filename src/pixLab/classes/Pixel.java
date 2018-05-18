@@ -368,13 +368,12 @@ public class Pixel
 
   public boolean isTransparent()
   {
-	  boolean transparency = false;
-	
-	  if (getAlpha() == 0 && getRed() == 0 && getGreen() == 0 && getBlue() ==0)
+
+	  if (getRed() == 0 && getGreen() == 0 && getBlue() == 0 && getAlpha() == 255)
 	  {
-		  transparency = true;
+		  return true;
 	  }
 	
-	  return transparency;
+	  return false;
   }
 }

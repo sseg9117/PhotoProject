@@ -100,12 +100,28 @@ public class IntArrayWorker
     }
   }
 
-public int getColTotal(int i)
-{
-	int colTotal = i;
-	
-	return colTotal;
-}
-
- 
+  public int getLargest()
+  {
+	  int largest = matrix[0][0];
+	  for (int[] rowArray : matrix)
+	  {
+		  for(int num : rowArray)
+		  {
+			  if(num > largest)
+			  {
+				  largest = num;
+			  }
+		  }
+	  }
+	  return largest;
+  }
+  public int getColTotal(int col)
+  {
+	  int colTotal = 0;
+	  for(int row = 0; row < matrix.length; row++)
+	  {
+		  colTotal += matrix[row][col];
+	  }
+	  return colTotal;
+  }
 }
