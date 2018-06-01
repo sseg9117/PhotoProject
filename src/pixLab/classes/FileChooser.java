@@ -1,14 +1,17 @@
 package pixLab.classes;
 
+import java.io.File;
+import java.io.UnsupportedEncodingException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLDecoder;
+
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
-import java.util.Properties;
-import java.io.*;
-import java.net.*;
 
 /**
- * A class to make working with a file chooser easier for students. It uses a
- * JFileChooser to let the user pick a file and returns the chosen file name.
+ * A class to make working with a file chooser easier for students. It uses a JFileChooser to let
+ * the user pick a file and returns the chosen file name.
  * 
  * @author Barb Ericson ericson@cc.gatech.edu
  */
@@ -47,8 +50,8 @@ public class FileChooser
 		String path = null;
 
 		/*
-		 * create a JFrame to be the parent of the file chooser open dialog if
-		 * you don't do this then you may not see the dialog.
+		 * create a JFrame to be the parent of the file chooser open dialog if you don't do this then you
+		 * may not see the dialog.
 		 */
 		JFrame frame = new JFrame();
 		frame.setAlwaysOnTop(true);
@@ -63,8 +66,8 @@ public class FileChooser
 	}
 
 	/**
-	 * Method to let the user pick a file and return the full file name as a
-	 * string. If the user didn't pick a file then the file name will be null.
+	 * Method to let the user pick a file and return the full file name as a string. If the user didn't
+	 * pick a file then the file name will be null.
 	 * 
 	 * @return the full file name of the picked file or null
 	 */
@@ -79,16 +82,15 @@ public class FileChooser
 		String mediaDir = getMediaDirectory();
 
 		/*
-		 * create a file for this and check that the directory exists and if it
-		 * does set the file chooser to use it
+		 * create a file for this and check that the directory exists and if it does set the file chooser to
+		 * use it
 		 */
 		try
 		{
 			File file = new File(mediaDir);
 			if (file.exists())
 				fileChooser = new JFileChooser(file);
-		}
-		catch (Exception ex)
+		} catch (Exception ex)
 		{
 		}
 
@@ -128,12 +130,10 @@ public class FileChooser
 				// setMediaPath(directory);
 				return directory;
 			}
-		}
-		catch (MalformedURLException ex)
+		} catch (MalformedURLException ex)
 		{
 			ex.printStackTrace();
-		}
-		catch (UnsupportedEncodingException e)
+		} catch (UnsupportedEncodingException e)
 		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();

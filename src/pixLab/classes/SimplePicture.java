@@ -1,10 +1,17 @@
 package pixLab.classes;
-import javax.imageio.ImageIO;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Point2D;
+import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
-import javax.swing.ImageIcon;
-import java.awt.*;
-import java.io.*;
-import java.awt.geom.*;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 /**
  * A class that represents a simple picture.  A simple picture may have
@@ -749,4 +756,4 @@ public class SimplePicture implements DigitalPicture
    return output;
  }
 
-} // end of SimplePicture class
+}

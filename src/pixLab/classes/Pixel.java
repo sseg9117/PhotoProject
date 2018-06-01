@@ -1,13 +1,11 @@
 package pixLab.classes;
+
 import java.awt.Color;
 
 /**
- * Class that references a pixel in a picture. Pixel 
- * stands for picture element where picture is 
- * abbreviated pix.  A pixel has a column (x) and 
- * row (y) location in a picture.  A pixel knows how 
- * to get and set the red, green, blue, and alpha 
- * values in the picture.  A pixel also knows how to get 
+ * Class that references a pixel in a picture. Pixel stands for picture element where picture is
+ * abbreviated pix. A pixel has a column (x) and row (y) location in a picture. A pixel knows how to
+ * get and set the red, green, blue, and alpha values in the picture. A pixel also knows how to get
  * and set the color using a Color object.
  * 
  * @author Barb Ericson ericson@cc.gatech.edu
@@ -368,12 +366,13 @@ public class Pixel
 
   public boolean isTransparent()
   {
-
-	  if (getRed() == 0 && getGreen() == 0 && getBlue() == 0 && getAlpha() == 255)
+	  boolean transparency = false;
+	  
+	  if(getAlpha() == 0 && getRed()== 0 && getBlue() == 0 && getGreen() == 0)
 	  {
-		  return true;
+		  transparency = true;
 	  }
-	
-	  return false;
+	  
+	  return transparency;
   }
 }
