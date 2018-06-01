@@ -11,12 +11,12 @@ public class PictureTester
 	/** Method to test zeroBlue */
 	public static void testZeroBlue()
 	{
-		Picture beach = new Picture("src/forest.jpeg");
+		Picture beach = new Picture("src/koala.jpg");
 		beach.explore();
-		// beach.zeroBlue();
-		// beach.mirrorTopToBottom();
-		// beach.gengarFilter(62, 43);
-		// beach.glitchArt();
+		 beach.zeroBlue();
+		 beach.mirrorTopToBottom();
+		 beach.gengarFilter(62, 43);
+		 beach.glitchArt();
 		beach.classFilter();
 		beach.explore();
 
